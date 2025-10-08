@@ -1,0 +1,189 @@
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background: #f7f9fc;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+/* Container */
+.app-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+/* Title */
+.app-title {
+  text-align: center;
+  color: #0b74de;
+  margin-bottom: 24px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Layout grid */
+.app-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 24px;
+}
+
+/* Card Styles */
+.form-card,
+.list-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  transition: transform 0.2s ease;
+}
+
+.form-card:hover,
+.list-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Form */
+.referral-form label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: #333;
+}
+
+.referral-form input,
+.referral-form select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  background: #f9fafc;
+  transition: all 0.3s ease;
+}
+
+.referral-form input:focus {
+  border-color: #0b74de;
+  box-shadow: 0 0 6px rgba(11, 116, 222, 0.3);
+  background: #fff;
+  outline: none;
+}
+
+.referral-form button {
+  width: 100%;
+  background: linear-gradient(135deg, #0b74de, #084fb6);
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 12px;
+  margin-top: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.referral-form button:hover {
+  background: linear-gradient(135deg, #095cc9, #063d8a);
+  transform: translateY(-1px);
+}
+
+/* Message/Error */
+.message {
+  margin-top: 10px;
+  color: #0b8043;
+  font-weight: 600;
+  text-align: center;
+}
+
+.error {
+  margin-top: 10px;
+  color: #b00020;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Candidate List */
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.list-header input {
+  width: 300px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.candidate-card {
+  background: #f9fafc;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  padding: 14px;
+  margin-bottom: 12px;
+  transition: all 0.2s ease;
+}
+
+.candidate-card:hover {
+  background: #eef6ff;
+  border-color: #cfe2ff;
+}
+
+.candidate-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.candidate-name {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.candidate-job {
+  font-style: italic;
+  color: #555;
+  margin: 4px 0;
+}
+
+.candidate-contact {
+  font-size: 13px;
+  color: #666;
+}
+
+.candidate-actions {
+  text-align: right;
+}
+
+.candidate-actions select {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 6px;
+}
+
+.candidate-actions a {
+  color: #0b74de;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.candidate-actions a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .list-header input {
+    width: 100%;
+  }
+}
